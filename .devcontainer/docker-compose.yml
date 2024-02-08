@@ -1,0 +1,12 @@
+version: '3'
+services:
+  react-docker-sample:
+    container_name: react-sample
+    image: node:18
+    tty: true
+    volumes:
+      - ../:/home/node/app
+      - ../:/workspaces:cached
+    ports:
+      - "5173:5173"
+    command: /bin/sh -c "while sleep 1000; do :; done"
