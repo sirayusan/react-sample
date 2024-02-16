@@ -9,7 +9,7 @@ const fetchData = async () => {
   const response = await fetch(`${Config.API_URL}/home`, {
     method: 'POST', // POSTメソッドを使用
     headers: {
-      'Authorization': `Bearer s${jwt}`
+      'Authorization': `Bearer `+jwt
     }
   });
 
@@ -20,7 +20,7 @@ const fetchData = async () => {
     throw error;
   }
 
-  return response.json();
+  return true;
 };
 // エラーオブジェクトの型を定義
 interface ErrorResponse {
@@ -48,7 +48,7 @@ export default function Root() {
   return (
     <>
       <div>ログイン成功！！おめでとう！</div>
-      <Link to="/login">login page</Link> {/* ルートパスへのリンク */}
+      <Link to="/login">login page</Link>
     </>
   );
 }
