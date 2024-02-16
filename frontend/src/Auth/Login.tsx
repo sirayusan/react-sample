@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useMutation } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import Config from '../config'
 
 interface FormData {
   mail: string;
@@ -21,7 +22,7 @@ function Login() {
 
   // ログイン処理を行う関数
   const login = async (formData: FormData) => {
-    const response = await fetch('http://localhost:8080/login', {
+    const response = await fetch(`${Config.API_URL}/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
