@@ -10,3 +10,6 @@ services:
     ports:
       - "5173:5173"
     command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      REACT_APP_ENV: ${REACT_APP_ENV}
+      REACT_APP_API_URL: ${REACT_APP_API_URL}
