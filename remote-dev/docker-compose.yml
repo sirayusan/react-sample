@@ -1,0 +1,21 @@
+version: '3'
+services:
+  react-docker-sample:
+    build:
+      context: ../
+      dockerfile: ./remote-dev/Dockerfile
+    tty: true
+    volumes:
+      - ../:/home/node/app
+      - ../:/workspaces:cached
+      - node_modules:../node_modules
+      - ../ide
+    ports:
+      - "5173:5173"
+      - "5993:5993"
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    environment:
+      REACT_APP_ENV: ${REACT_APP_ENV}
+      REACT_APP_API_URL: ${REACT_APP_API_URL}
+volumes:
+  node_modules:
