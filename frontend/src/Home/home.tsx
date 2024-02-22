@@ -66,6 +66,7 @@ export default function Home() {
   return (
       <>
         <section>
+          <div>チャット一覧</div>
           <div className="w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
             {data?.List.map((chat: ChatItem, index: number) => (
                 <div className="flex w-full max-w-md p-6 bg-white shadow-lg rounded-lg mb-6" key={index}>
