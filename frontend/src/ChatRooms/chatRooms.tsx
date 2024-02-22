@@ -38,7 +38,7 @@ interface ApiResponse {
   List: ChatItem[];
 }
 
-export default function Home() {
+export default function ChatRooms() {
   const { error, isError, isLoading, data } = useQuery<ApiResponse>('homeData', fetchData);
 
   const err = error as ErrorResponse;
@@ -67,19 +67,21 @@ export default function Home() {
       <>
         <section>
           <div>チャット一覧</div>
-          <div className="w-full px-5 py-12 mx-auto md:px-12 lg:px-24 max-w-7xl">
-            {data?.List.map((chat: ChatItem, index: number) => (
-                <div className="flex w-full max-w-md p-6 bg-white shadow-lg rounded-lg mb-6" key={index}>
-                  <img alt="user icon" className="w-10 h-10 rounded-full mr-4" src="https://via.placeholder.com/200x200" />
-                  <div className="flex flex-col justify-between w-full">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-900 truncate">{chat.user_name}</span>
-                      <span className="text-xs text-gray-500">{formatDate(chat.created_at)}</span>
+          <div className="flex justify-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24">
+            <div className="flex flex-col items-center w-full max-w-7xl">
+              {data?.List.map((chat: ChatItem, index: number) => (
+                  <Link to="/chat-rooms/1" className="flex min-w-400 w-full max-w-md p-6 bg-white shadow-lg rounded-lg mb-6" key={index}>
+                    <img alt="user icon" className="w-10 h-10 rounded-full mr-4" src="https://via.placeholder.com/200x200" />
+                    <div className="flex flex-col justify-between w-full">
+                      <div className="flex justify-between items-center w-full">
+                        <span className="text-sm font-medium text-gray-900 truncate">{chat.user_name}</span>
+                        <span className="text-xs text-gray-500">{formatDate(chat.created_at)}</span>
+                      </div>
+                      <p className="text-gray-700 text-left truncate">{chat.message.length > 20 ? `${chat.message.substring(0, 20)}...` : chat.message}</p>
                     </div>
-                    <p className="text-gray-700 text-left truncate">{chat.message.length > 20 ? `${chat.message.substring(0, 22)}...` : chat.message}</p>
-                  </div>
-                </div>
-            ))}
+                  </Link>
+              ))}
+            </div>
           </div>
         </section>
         <Link to="/login">ログインページへ</Link>

@@ -3,7 +3,7 @@ import { QueryClientProvider } from 'react-query';
 import { QueryClient } from 'react-query';
 import ErrorPage from "../error-page";
 import Login from "../Auth/Login";
-import Home from "../Home/home";
+import ChatRooms from "../ChatRooms/chatRooms.tsx";
 
 const queryClient = new QueryClient();
 
@@ -12,7 +12,7 @@ export default function Root() {
     <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/chat-rooms" element={<ChatRooms />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </QueryClientProvider>
