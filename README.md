@@ -17,4 +17,4 @@ Go言語の技術的な検証や動作確認用として作成しました。
 [DevContainerを使う手順](./docs/DevContainer.md)  
 DevContainerを使用して開発環境を構築する方法について説明しています。  
 [WSL2配下配置していてGoLandを使っている方](./docs/WebStormRemoteDev.md)  
-WSL2上でGoLandをリモート開発環境として使用する方法について説明しています。
+WSL2上でWebStormをリモート開発環境として使用する方法について説明しています。

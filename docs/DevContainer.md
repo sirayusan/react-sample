@@ -22,7 +22,7 @@ git clone https://github.com/sirayusan/react-sample.git
 ![タイトルなし](https://github.com/sirayusan/business/assets/73060776/690b8084-340b-4c43-baf5-4fef6d11efed)
 7. このような表示がでて新しくウインドウが開かれる。以降は新しいウインドウで操作する。  
 ![image](https://github.com/sirayusan/business/assets/73060776/989e02ae-9595-451a-93e6-d637a33fb0aa)  
-![image](https://github.com/sirayusan/business/assets/73060776/739bd03a-b40d-4fc6-a209-474225fbb41c)
+![image](https://github.com/sirayusan/react-sample/assets/73060776/013ea47d-509b-4c4f-9301-85951c5ab8ba)
 8. Alt + F12でターミナルを開く  
 ![image](https://github.com/sirayusan/business/assets/73060776/26fc15e0-09d3-43be-afa1-120889d1aa24)
 9. アプリ起動

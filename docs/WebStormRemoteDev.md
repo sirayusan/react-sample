@@ -22,4 +22,12 @@ docker-compose up -d
 5. Gatewayを開き`Remote Development`の`connect to Running IDE`にペーストする。
 ![image](https://github.com/sirayusan/react-sample/assets/73060776/33f6a3fe-b27a-466f-94c3-d02d45fd3096)
 6. Connectを押下し  
-7. あとは流れでボタンを押して行き開くだけ
+7. 流れでボタンを押して行くとエディタが開く。
+8. Alt + F12でターミナルを開く  
+      ![image](https://github.com/sirayusan/business/assets/73060776/26fc15e0-09d3-43be-afa1-120889d1aa24)
+9. アプリ起動
+```
+task run
+```
+このような表示が出たら環境構築完了。  
+![image](https://github.com/sirayusan/react-sample/assets/73060776/81828a18-7c55-4b37-8f73-b67c64e10cb3)
