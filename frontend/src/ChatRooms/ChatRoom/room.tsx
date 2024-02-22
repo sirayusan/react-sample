@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
-import Config from '../config';
+import Config from '../../config.tsx';
 import Cookies from 'js-cookie';
 
 // APIからデータを取得するための関数
@@ -75,7 +75,7 @@ export default function ChatRoom() {
             ))}
           </div>
         </section>
-        <Link to="/login">ログインページへ</Link>
+        <Link to="/chat-rooms">チャット一覧</Link>
       </>
   );
 }
