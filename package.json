@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "swr": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17"
   }
 }

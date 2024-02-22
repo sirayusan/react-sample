@@ -33,13 +33,13 @@
         "donjayamanne.githistory"
       ],
 	  "settings": {
-		"files.encoding": "utf8",
-		"files.eol": "\n",
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"[javascript]": {
-		  "editor.defaultFormatter": "esbenp.prettier-vscode"
-		}
-	  },
+		  "files.encoding": "utf8",
+		  "files.eol": "\n",
+		  "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "files.associations": {
+        "*.css": "tailwindcss"
+      }
+	  }
     }
   },
 
