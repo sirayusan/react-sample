@@ -3,7 +3,7 @@ import { QueryClientProvider } from 'react-query';
 import { QueryClient } from 'react-query';
 import ErrorPage from "../error-page";
 import Login from "../Auth/Login";
-import Home from "../Hoom/home";
+import Home from "../Home/home";
 
 const queryClient = new QueryClient();
 
