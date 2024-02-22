@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  react-docker-sample:
+    build:
+      context: ../
+      dockerfile: ./remote-dev-front/Dockerfile
+    tty: true
+    volumes:
+      - ../:/front
+      - node_modules:/front/node_modules
+      - /front/ide
+    ports:
+      - ${VITE_CLIENT_PORT}:${VITE_HOST_PORT}
+      - "5993:5993" # この値を変更する場合、DockerFileの方も変更しなければならない。
+    environment:
+      - VITE_CLIENT_PORT=${VITE_CLIENT_PORT}
+volumes:
+  node_modules:

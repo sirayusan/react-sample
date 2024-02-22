@@ -8,8 +8,5 @@ services:
       - ../:/home/node/app
       - ../:/workspaces:cached
     ports:
-      - "5173:5173"
+      - ${VITE_CLIENT_PORT}:${VITE_HOST_PORT}
     command: /bin/sh -c "while sleep 1000; do :; done"
-    environment:
-      REACT_APP_ENV: ${REACT_APP_ENV}
-      REACT_APP_API_URL: ${REACT_APP_API_URL}
