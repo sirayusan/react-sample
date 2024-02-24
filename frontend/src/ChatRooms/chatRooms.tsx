@@ -28,6 +28,7 @@ interface ErrorResponse extends Error {
 
 // APIレスポンス内のチャットアイテムの型を定義
 interface ChatItem {
+  chat_room_id: number
   user_name: string;
   message: string;
   created_at: string;
@@ -70,7 +71,7 @@ export default function ChatRooms() {
           <div className="flex justify-center w-full px-5 py-12 mx-auto md:px-12 lg:px-24">
             <div className="flex flex-col items-center w-full max-w-7xl">
               {data?.List.map((chat: ChatItem, index: number) => (
-                  <Link to="/chat-rooms/1" className="flex min-w-[400px] w-full max-w-md p-6 bg-white shadow-lg rounded-lg mb-6" key={index}>
+                  <Link to={"/chat-rooms/"+chat.chat_room_id} className="flex min-w-[400px] w-full max-w-md p-6 bg-white shadow-lg rounded-lg mb-6" key={index}>
                     <img alt="user icon" className="w-10 h-10 rounded-full mr-4" src="https://via.placeholder.com/200x200" />
                     <div className="flex flex-col justify-between w-full">
                       <div className="flex justify-between items-center w-full">
