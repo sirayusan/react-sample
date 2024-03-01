@@ -5,14 +5,16 @@ services:
       context: ../
       dockerfile: ./remote-dev-front/Dockerfile
     tty: true
+    env_file:
+      - .env
     volumes:
       - ../:/front
       - node_modules:/front/node_modules
       - /front/ide
+      - ../cert/${SECRET_KEY_FILE_NAME}:${SECRET_KEY_PATH}/${SECRET_KEY_FILE_NAME}
+      - ../cert/${CERT_FILE_NAME}:${CERT_PATH}/${CERT_FILE_NAME}
     ports:
       - ${VITE_CLIENT_PORT}:${VITE_HOST_PORT}
       - "5993:5993" # この値を変更する場合、DockerFileの方も変更しなければならない。
-    environment:
-      - VITE_CLIENT_PORT=${VITE_CLIENT_PORT}
 volumes:
   node_modules:

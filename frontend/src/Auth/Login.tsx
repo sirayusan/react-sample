@@ -45,7 +45,7 @@ function Login() {
   // useMutationを使用してログイン処理を実行
   const { mutate } = useMutation(login, {
     onSuccess: () => {
-      navigate('/home'); // ログイン成功時に/homeに遷移
+      navigate('/chat-rooms'); // ログイン成功時に/homeに遷移
     },
     onError: (error: Error) => {
       setLoginStatus(error.message); // エラー時にメッセージを設定
