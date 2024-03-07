@@ -12,8 +12,7 @@ export default function Root() {
   return (
     <QueryClientProvider client={queryClient}>
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/chat-rooms" element={<ChatRooms />} />
+        <Route path="/login" element={<Login />} /><Route path="/chat-rooms" element={<ChatRooms />} />
         <Route path="/chat-rooms/:id" element={<ChatRoom />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
